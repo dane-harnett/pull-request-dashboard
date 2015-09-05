@@ -1,0 +1,56 @@
+/* -- BASE -- */
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Verdana;
+}
+
+/* -- HEADER -- */
+h1 {
+  font-size: 24px;
+  margin: 10px;
+}
+
+/* -- PULL REQUEST LIST -- */
+.pull-request-list li {
+  background: linear-gradient(to bottom,  #b5bdc8 0%,#828c95 36%,#28343b 100%);
+  border-radius: 10px;
+  display: inline-block;
+  padding: 0;
+  margin: 10px;
+  width: 400px;
+}
+
+.pull-request-list li .header {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.pull-request-list li.success .header {
+  background: linear-gradient(to bottom,  #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%);
+}
+
+.pull-request-list li.failure .header {
+  background: linear-gradient(to bottom,  #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%);
+}
+
+.pull-request-list li.pending .header {
+  background: linear-gradient(to bottom,  #ffb76b 0%,#ffa73d 50%,#ff7c00 51%,#ff7f04 100%);
+}
+
+.pull-request-list li .body {
+  color: #fff;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.pull-request-list li .body .user-avatar {
+  float: left;
+  margin-right: 10px;
+  width: 48px;
+}
+
+.pull-request-list li .body .title {
+  float: left;
+  width: 300px;
+}
