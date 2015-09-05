@@ -1,3 +1,8 @@
+Create the config file
+`cp config.json.sample config.json`
+
+Add the configuration to config.json
+
 Install the dependancies
 `npm install`
 
