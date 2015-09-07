@@ -10,4 +10,4 @@ Build the javascript package
 `browserify ./src/index.js > ./web/js/main.js`
 
 Start the server
-`node server.js`
+`npm run start`
