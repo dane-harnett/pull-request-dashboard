@@ -1,21 +1,15 @@
 var React = require('react');
 
+var PullRequest = require('./PullRequest');
+
 var PullRequestList = React.createClass({
   render: function() {
-    var c = this.props.pullRequests.map(function(pullRequest, index) {
-      return <li key={ index } value={ index } className={pullRequest.status}>
-        <div className="header">
-          <div>{pullRequest.number}</div>
-        </div>
-        <div className="body">
-          <img className="user-avatar" src={pullRequest.user.avatar_url} />
-          <div className="title">{pullRequest.title}</div>
-        </div>
-      </li>;
+    var pullRequestNodes = this.props.pullRequests.map(function(pullRequest, index) {
+      return <PullRequest key={ index } value={ index } pullRequest={pullRequest} />;
     });
 
     return <ul className="pull-request-list">
-            { c }
+            { pullRequestNodes }
           </ul>;
   }
 });
