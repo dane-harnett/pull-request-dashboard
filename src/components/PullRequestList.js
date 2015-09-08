@@ -1,9 +1,8 @@
-var React = require('react');
+import React from 'react';
+import PullRequest from './PullRequest';
 
-var PullRequest = require('./PullRequest');
-
-var PullRequestList = React.createClass({
-  render: function() {
+export default class PullRequestList extends React.Component {
+  render() {
     var pullRequestNodes = this.props.pullRequests.map(function(pullRequest, index) {
       return <PullRequest key={ index } value={ index } pullRequest={pullRequest} />;
     });
@@ -12,6 +11,4 @@ var PullRequestList = React.createClass({
             { pullRequestNodes }
           </ul>;
   }
-});
-
-module.exports = PullRequestList;
+}

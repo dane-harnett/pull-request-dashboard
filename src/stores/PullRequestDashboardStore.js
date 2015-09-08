@@ -1,6 +1,5 @@
-var Dispatcher = require('../Dispatcher');
-
-var Api = require('../api/Api');
+import Dispatcher from '../Dispatcher';
+import Api from '../api/Api';
 
 var PullRequestDashboardStore = {
 
@@ -10,7 +9,7 @@ var PullRequestDashboardStore = {
 
   timer: 60,
 
-  initialize: function() {
+  initialize() {
     var self = this;
 
     Dispatcher.register('response:api:pull-requests', PullRequestDashboardStore.handlePullRequestsResponse, PullRequestDashboardStore);
@@ -28,20 +27,20 @@ var PullRequestDashboardStore = {
     }, 1000);
   },
 
-  handlePullRequestsResponse: function(data) {
+  handlePullRequestsResponse(data) {
     this.pullRequestsResponse = data.response;
     this.emitChange();
   },
 
-  getPullRequests: function() {
+  getPullRequests() {
     return this.pullRequestsResponse.pullRequests;
   },
 
-  getTimer: function() {
+  getTimer() {
     return this.timer;
   },
 
-  emitChange: function() {
+  emitChange() {
     Dispatcher.dispatch('change:pull-request-dashboard-store');
   }
 };

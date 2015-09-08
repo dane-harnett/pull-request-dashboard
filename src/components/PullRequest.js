@@ -1,7 +1,7 @@
-var React = require('react');
+import React from 'react';
 
-var PullRequest = React.createClass({
-  render: function() {
+export default class PullRequest extends React.Component {
+  render() {
     return <li className={ this.props.pullRequest.status }>
       <div className="header">
         <div>{ this.props.pullRequest.number }</div>
@@ -12,6 +12,4 @@ var PullRequest = React.createClass({
       </div>
     </li>;
   }
-});
-
-module.exports = PullRequest;
+}

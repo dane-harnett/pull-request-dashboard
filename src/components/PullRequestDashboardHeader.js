@@ -1,9 +1,7 @@
-var React = require('react');
+import React from 'react';
 
-var PullRequestDashboardHeader = React.createClass({
-  render: function() {
+export default class PullRequestDashboardHeader extends React.Component {
+  render() {
     return <h1>Pull Request Dashboard ({this.props.timer})</h1>;
   }
-});
-
-module.exports = PullRequestDashboardHeader;
+}

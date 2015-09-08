@@ -1,7 +1,7 @@
-var Dispatcher = require('../Dispatcher');
+import Dispatcher from '../Dispatcher';
 
 var ApiActions = {
-  responsePullRequests: function(payload) {
+  responsePullRequests(payload) {
     Dispatcher.dispatch('response:api:pull-requests', payload);
   }
 };

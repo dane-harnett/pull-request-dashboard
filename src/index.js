@@ -1,9 +1,8 @@
-var React = require('react');
+import React from 'react';
+import PullRequestDashboardStore from './stores/PullRequestDashboardStore';
+import PullRequestDashboardApplication from './components/PullRequestDashboardApplication';
 
-var PullRequestDashboardStore = require('./stores/PullRequestDashboardStore');
 PullRequestDashboardStore.initialize();
-
-var PullRequestDashboardApplication = require('./components/PullRequestDashboardApplication');
 
 React.render(
   <PullRequestDashboardApplication />,

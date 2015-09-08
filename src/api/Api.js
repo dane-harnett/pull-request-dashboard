@@ -1,13 +1,13 @@
-var jQuery = require('jquery');
-var Dispatcher = require('../Dispatcher');
-var ApiActions = require('./ApiActions');
+import jQuery from 'jquery';
+import Dispatcher from '../Dispatcher';
+import ApiActions from './ApiActions';
 
 var Api = {
-  requestPullRequests: function(settings) {
+  requestPullRequests(settings) {
     jQuery.ajax({
       url: '/api/pull-requests',
       dataType: 'json',
-      success: function(response) {
+      success(response) {
         ApiActions.responsePullRequests({
           request: settings,
           response: response
